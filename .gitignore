@@ -1,0 +1,161 @@
+# ============================
+# AI/ML Hackathon .gitignore
+# ============================
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+*.whl
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ---------- Virtual Environments ----------
+venv/
+env/
+.env/
+.venv/
+ENV/
+conda-env/
+.conda/
+
+# ---------- Jupyter Notebooks ----------
+.ipynb_checkpoints/
+*.ipynb_metadata/
+*/.ipynb_checkpoints/*
+
+# ---------- IDE / Editor ----------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+.spyderproject
+.spyproject
+.ropeproject
+
+# ---------- OS Files ----------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# ---------- Environment Variables / Secrets ----------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.yaml
+secrets.json
+config.local.*
+
+# ---------- Data Files ----------
+data/
+datasets/
+*.csv
+*.tsv
+*.parquet
+*.feather
+*.h5
+*.hdf5
+*.arrow
+*.json.gz
+*.ndjson
+*.sqlite
+*.db
+
+# ---------- Model Files / Weights ----------
+models/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.pb
+*.tflite
+*.mlmodel
+*.pkl
+*.pickle
+*.joblib
+saved_models/
+runs/
+outputs/
+
+# ---------- ML Frameworks / Experiment Tracking ----------
+mlruns/
+wandb/
+lightning_logs/
+tensorboard_logs/
+logs/
+*.tfevents*
+catboost_info/
+
+# ---------- Hugging Face ----------
+.cache/
+*.bin
+transformers_cache/
+
+# ---------- Large / Binary Files ----------
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+*.gz
+*.bz2
+*.xz
+*.iso
+*.dmg
+
+# ---------- Media (generated plots, images) ----------
+*.mp4
+*.avi
+*.mov
+*.wav
+*.mp3
+
+# ---------- Compiled / Build ----------
+*.o
+*.dll
+*.dylib
+*.exe
+*.out
+
+# ---------- Package Managers ----------
+node_modules/
+package-lock.json
+yarn.lock
+poetry.lock
+
+# ---------- Docker ----------
+*.log
+docker-compose.override.yml
+
+# ---------- Misc ----------
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.cover
+coverage.xml
+nosetests.xml
+*.hypothesis/
+.tox/
+.nox/
