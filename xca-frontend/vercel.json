@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://team-xca-rtdj.onrender.com/:path*"
+    }
+  ]
+}
