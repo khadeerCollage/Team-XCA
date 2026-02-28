@@ -2,6 +2,8 @@ import { useState } from "react";
 import { C } from "../../constants/colors";
 import { useIngestPipeline } from "../../hooks/useIngestPipeline";
 
+const API = import.meta.env.VITE_API_URL || '/api';
+
 export default function IngestView({ onComplete }) {
   const { phase, progress, log, setLog, run, graphData } = useIngestPipeline();
 
@@ -14,7 +16,7 @@ export default function IngestView({ onComplete }) {
     setLog(["Connecting to backend pipeline service..."]);
 
     try {
-      const res = await fetch('/api/pipeline/generate', { method: 'POST' });
+      const res = await fetch(`${API}/pipeline/generate`, { method: 'POST' });
       const data = await res.json();
 
       // Animate backend logs one by one into the SYSTEM LOG panel

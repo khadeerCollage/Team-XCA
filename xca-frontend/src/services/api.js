@@ -4,7 +4,8 @@
  * Connects ALL FastAPI endpoints to the React frontend.
  * Transforms backend response shapes → frontend component shapes.
  *
- * All calls go through Vite proxy: /api/* → http://localhost:8000/*
+ * In development, Vite proxy rewrites /api/* → http://localhost:8000/*
+ * In production, calls go directly to the Render backend.
  *
  * Endpoints covered:
  *   GET  /health
@@ -19,7 +20,7 @@
  *   POST /audit-engine/generate/{inv}  POST /audit-engine/batch  GET /audit-engine/results  GET /audit-engine/summary
  */
 
-const API = '/api';
+const API = import.meta.env.VITE_API_URL || '/api';
 
 // ═══════════════════════════════════════════════════════════
 //  HEALTH

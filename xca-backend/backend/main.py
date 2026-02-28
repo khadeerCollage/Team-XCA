@@ -63,7 +63,7 @@ Built for **HackWithAI #76** — FinTech / GovTech / Graph AI
 # ── CORS — allow React frontend to call this API ──────────────
 app.add_middleware(
     CORSMiddleware,
-    allow_origins     = ["http://localhost:3000", "http://localhost:5173"],
+    allow_origins     = ["*"],
     allow_credentials = True,
     allow_methods     = ["*"],
     allow_headers     = ["*"],
@@ -88,7 +88,7 @@ def root():
     return {
         "status":  "GST Reconciliation API is running",
         "version": "1.0.0",
-        "docs":    "http://localhost:8000/docs",
+        "docs":    "/docs",
     }
 
 

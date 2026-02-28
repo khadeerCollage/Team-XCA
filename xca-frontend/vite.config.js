@@ -11,7 +11,7 @@ export default defineConfig({
       'Referrer-Policy': 'strict-origin-when-cross-origin',
       'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
     },
-    // Proxy /api/* → http://localhost:8000/*  (FastAPI backend)
+    // Proxy /api/* → http://localhost:8000/*  (FastAPI backend — dev only)
     proxy: {
       '/api': {
         target: 'http://localhost:8000',

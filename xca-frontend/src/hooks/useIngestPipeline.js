@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { loadGraph } from "../services/graphLoader";
 
+const API = import.meta.env.VITE_API_URL || '/api';
+
 export function useIngestPipeline() {
     const [phase, setPhase] = useState("idle"); // idle | loading | done
     const [progress, setProgress] = useState({});
@@ -29,7 +31,7 @@ export function useIngestPipeline() {
         });
 
         // Call the real backend pipeline endpoint
-        fetch('/api/pipeline/run', { method: 'POST' })
+        fetch(`${API}/pipeline/run`, { method: 'POST' })
             .then(res => res.json())
             .then(data => {
                 // Animate backend logs into SYSTEM LOG one by one
