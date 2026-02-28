@@ -5,6 +5,10 @@ database/neo4j_connection.py
 from neo4j import GraphDatabase, Driver
 from dotenv import load_dotenv
 import os
+import warnings
+
+# Suppress non-critical Neo4j DNS deprecation warnings
+warnings.filterwarnings("ignore", category=DeprecationWarning, module="neo4j")
 
 load_dotenv()
 
