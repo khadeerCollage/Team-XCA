@@ -11,4 +11,5 @@ scikit-learn
 requests
 jinja2
 python-multipart
+faker
 
