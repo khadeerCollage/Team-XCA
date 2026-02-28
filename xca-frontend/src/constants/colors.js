@@ -8,7 +8,6 @@ export const C = {
     // Borders
     border: "#d1d9e6",
     border2: "#b8c5d9",
-
     // Text
     text: "#0f172a",    // primary near black
     text2: "#475569",   // secondary text
